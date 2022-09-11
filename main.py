@@ -1,3 +1,6 @@
+# NOTE: IDK paano pakita yung Natural Numbers are infinite kaya di ko nilagay sa option
+# pa-check nalang if tama gawa q :>
+
 def one():
     # is this right?? lolx
     print("""\nAssociative (Addition)
@@ -10,11 +13,20 @@ def one():
 
 
 def two():
-    print("Commutative (Addition)")
+    print("""\nCommutative (Addition)
+       m+n = n+m\n""")
+    m = input("Enter value of m: ")
+    n = input("Enter value of n: ")
+
+    return f"{m}+{n} = {n}+{m}"
 
 
 def three():
-    print("Identity (Addition)")
+    print("""\nIdentity (Addition)
+           0+n = n\n""")
+    n = input("Enter value of n: ")
+
+    return f"0+{n} = {n}"
 
 
 def four():
