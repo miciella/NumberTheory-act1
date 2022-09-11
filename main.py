@@ -30,15 +30,29 @@ def three():
 
 
 def four():
-    print("Associative (Multiplication)")
+    print("""\nAssociative (Multiplication)
+    (x*y)*z = x*(y*z)\n""")
+    x = input("Enter value of x: ")
+    y = input("Enter value of y: ")
+    z = input("Enter value of z: ")
+
+    return f"({x}*{y})*{z} = {x}*({y}*{z})"
 
 
 def five():
-    print("Commutative (Multiplication)")
+    print("""\nCommutative (Multiplication)
+    x*y = y*x\n""")
+    x = input("Enter value of x: ")
+    y = input("Enter value of y: ")
+
+    return f"{x}*{y} = {y}*{x}"
 
 
 def six():
-    print("Identity (Multiplication)")
+    print("""\nIdentity (Multiplication)
+    n*1 = n = 1*n\n""")
+    n = input("Enter value of n: ")
+    return f"{n} * {1} = {n} = {1} * {n}"
 
 
 def seven():
