@@ -1,8 +1,5 @@
-# NOTE: IDK paano pakita yung Natural Numbers are infinite kaya di ko nilagay sa option
-# pa-check nalang if tama gawa q :>
 
 def one():
-    # is this right?? lolx
     print("""\nAssociative (Addition)
     x+(y+z) = (x+y)+z\n""")
     x = input("Enter value of x: ")
@@ -73,6 +70,7 @@ def eight():
     
     return f"{m}+{n} = {int(n) + int(m)}"
 
+
 def nine():
     print("""\nClosure Property (Multiplication)
        m*n ∈ N, for all m, n ∈ N\n""")
@@ -81,8 +79,10 @@ def nine():
     
     return f"{m}*{n} = {int(n) * int(m)}"
 
+
 def ten():
-    quit() 
+    quit()
+
 
 def default():
     return "Invalid option. Try again"
@@ -126,13 +126,8 @@ def menu_option():
 menu_option()
 try_again = input("\nTry again? y/n: ").lower()
 
-
-# lol idk if this is efficient (change if meron pa other way hehe)
 while try_again == 'y':
     menu_option()
     try_again = input("\nTry again? y/n: ").lower()
-    
-    
-    
     
     
