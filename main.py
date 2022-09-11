@@ -56,16 +56,33 @@ def six():
 
 
 def seven():
-    print("Distribution")
+    print("""\nDistribution (Multiplication over Addition)
+    (x+y)*z = (x*z)+(y*z)\n""")
+    x = input("Enter value of x: ")
+    y = input("Enter value of y: ")
+    z = input("Enter value of z: ")
+
+    return f"({x}+{y})*{z} = ({x}*{z})+({y}*{z})"
 
 
 def eight():
-    print("Addition is closed")
-
+    print("""\nClosure Property (Addition)
+       m+n ∈ N, for all m, n ∈ N\n""")
+    m = input("Enter value of m: ")
+    n = input("Enter value of n: ")
+    
+    return f"{m}+{n} = {int(n) + int(m)}"
 
 def nine():
-    print("Multiplication is closed")
+    print("""\nClosure Property (Multiplication)
+       m*n ∈ N, for all m, n ∈ N\n""")
+    m = input("Enter value of m: ")
+    n = input("Enter value of n: ")
+    
+    return f"{m}*{n} = {int(n) * int(m)}"
 
+def ten():
+    quit() 
 
 def default():
     return "Invalid option. Try again"
@@ -80,7 +97,8 @@ number_choices = {
     6: six,
     7: seven,
     8: eight,
-    9: nine
+    9: nine,
+    10: ten
     }
 
 
@@ -97,8 +115,8 @@ def menu_option():
         5. Commutative (Multiplication)
         6. Identity (Multiplication)
         7. Distribution
-        8. Addition is closed
-        9. Multiplication is closed
+        8. Closure Property (Addition)
+        9. Closure Property (Multiplication)
         10. Exit""")
 
     choice = int(input("Choose a property for Natural Numbers: "))
@@ -113,7 +131,8 @@ try_again = input("\nTry again? y/n: ").lower()
 while try_again == 'y':
     menu_option()
     try_again = input("\nTry again? y/n: ").lower()
-
-
-
-
+    
+    
+    
+    
+    
