@@ -67,13 +67,15 @@ print("""Properties of Natural Numbers:
     9. Multiplication is closed
     10. Exit""")
 
-
 choice = int(input("Choose a property for Natural Numbers: "))
 print(choice_function(choice))
 try_again = input("Try again? y/n: ").lower()
 
+# lol idk if this is efficient (change if meron pa other way hehe)
 while try_again == 'y':
-    choice = int(input("Choose a property for Natural Numbers: "))
+    choice = int(input("Choose a property for Natural Numbers: \n"))
+    print(choice_function(choice))
+    try_again = input("\nTry again? y/n: ").lower()
 
 
 
