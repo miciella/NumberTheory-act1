@@ -1,4 +1,3 @@
-
 def one():
     print("""\nAssociative (Addition)
     x+(y+z) = (x+y)+z\n""")
@@ -13,10 +12,11 @@ def one():
 def two():
     print("""\nCommutative (Addition)
        m+n = n+m\n""")
-    m = input("Enter value of m: ")
-    n = input("Enter value of n: ")
+    m = int(input("Enter value of m: "))
+    n = int(input("Enter value of n: "))
 
-    return f"{m}+{n} = {n}+{m}"
+    print(f"{m}+{n} = {n}+{m}")
+    return f"{m+n} = {n+m}"
 
 
 def three():
@@ -30,12 +30,13 @@ def three():
 def four():
     print("""\nAssociative (Multiplication)
     (x*y)*z = x*(y*z)\n""")
-    x = input("Enter value of x: ")
-    y = input("Enter value of y: ")
-    z = input("Enter value of z: ")
+    x = int(input("Enter value of x: "))
+    y = int(input("Enter value of y: "))
+    z = int(input("Enter value of z: "))
 
-    return f"({x}*{y})*{z} = {x}*({y}*{z})"
-
+    
+    print(f"({x}*{y})*{z} = {x}*({y}*{z})")
+    return f"{(x*y)*z} = {x*(y*z)}"
 
 def five():
     print("""\nCommutative (Multiplication)
@@ -50,9 +51,11 @@ def five():
 def six():
     print("""\nIdentity (Multiplication)
     n*1 = n = 1*n\n""")
-    n = input("Enter value of n: ")
-    return f"{n} * {1} = {n} = {1} * {n}"
-
+    n = int(input("Enter value of n: "))
+    
+    
+    print(f"{n} * {1} = {n} = {1} * {n}") 
+    return f"{n * 1} = {n} = {1 * n}"
 
 def seven():
     print("""\nDistribution (Multiplication over Addition)
@@ -68,11 +71,10 @@ def seven():
 def eight():
     print("""\nClosure Property (Addition)
        m+n ∈ N, for all m, n ∈ N\n""")
-    m = input("Enter value of m: ")
-    n = input("Enter value of n: ")
+    m = int(input("Enter value of m: "))
+    n = int(input("Enter value of n: "))
     
     return f"{m}+{n} = {int(n) + int(m)}"
-
 
 def nine():
     print("""\nClosure Property (Multiplication)
@@ -132,5 +134,3 @@ try_again = input("\nTry again? y/n: ").lower()
 while try_again == 'y':
     menu_option()
     try_again = input("\nTry again? y/n: ").lower()
-    
-    
