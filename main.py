@@ -2,11 +2,12 @@
 def one():
     print("""\nAssociative (Addition)
     x+(y+z) = (x+y)+z\n""")
-    x = input("Enter value of x: ")
-    y = input("Enter value of y: ")
-    z = input("Enter value of z: ")
+    x = int(input("Enter value of x: "))
+    y = int(input("Enter value of y: "))
+    z = int(input("Enter value of z: "))
 
-    return f"{x}+({y}+{z}) = ({x}+{y})+{z}"
+    print(f"{x}+({y}+{z}) = ({x}+{y})+{z}")
+    return f"{x+(y+z)} = {(x+y)+z}"
 
 
 def two():
@@ -39,10 +40,11 @@ def four():
 def five():
     print("""\nCommutative (Multiplication)
     x*y = y*x\n""")
-    x = input("Enter value of x: ")
-    y = input("Enter value of y: ")
+    x = int(input("Enter value of x: "))
+    y = int(input("Enter value of y: "))
 
-    return f"{x}*{y} = {y}*{x}"
+    print(f"{x}*{y} = {y}*{x}")
+    return f"{x*y} = {y*x}"
 
 
 def six():
@@ -55,11 +57,12 @@ def six():
 def seven():
     print("""\nDistribution (Multiplication over Addition)
     (x+y)*z = (x*z)+(y*z)\n""")
-    x = input("Enter value of x: ")
-    y = input("Enter value of y: ")
-    z = input("Enter value of z: ")
+    x = int(input("Enter value of x: "))
+    y = int(input("Enter value of y: "))
+    z = int(input("Enter value of z: "))
 
-    return f"({x}+{y})*{z} = ({x}*{z})+({y}*{z})"
+    print(f"({x}+{y})*{z} = ({x}*{z})+({y}*{z})")
+    return f"{(x+y)*z} = {(x*z)+(y*z)}"
 
 
 def eight():
