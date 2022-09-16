@@ -7,7 +7,22 @@ def one():
 
     choice = int(input("What would you like to do? "))
     if choice == 1:
-        #normalPermutation()
+        if choice == 1:
+            x = int(input("How many total items are there? "))
+            y = int(input("How many items are to be arranged at a time? "))
+            new_x = 1
+            new_y = 1
+            if (x >= y):
+                for i in range(x, 1, -1):
+                    new_x = i * new_x
+
+                for i in range(x - y, 1, -1):
+                    new_y = i * new_y
+                final_perm = int(new_x / new_y)
+
+                return f"{final_perm} ways"
+            else:
+                return "\nWARNING: Total items should be bigger than items to be arranged"
 
     elif choice == 2:
         x = int(input("How many total items are there? "))
@@ -20,12 +35,10 @@ def one():
         return f"{int(final_perm)} ways"
 
     elif choice == 3:
-        #distPermutation()
         item_types = int(input("How many types of items are there? "))
         item_count = []
         total_items = 0
         new_x = 1
-        # new_y = 1
 
         for i in range(1, item_types +1):
             print("How many type", i, "items are there? ")
@@ -46,8 +59,7 @@ def one():
 
         return f"{int(final_perm)} ways"
     else:
-        quit()
-
+        return "Invalid option"
 
 def two():
     print("""\nCombinations\n
@@ -56,28 +68,30 @@ def two():
 
     choice = int(input("Choose a type of combination: "))
     if choice == 1:
-            # baseCombination()
             x = int(input("How many total items are there? "))
             y = int(input("How many items are to be selected? "))
 
-            new_x = 1
-            new_y = 1
-            new_z = 1
+            if(x>=y):
+                new_x = 1
+                new_y = 1
+                new_z = 1
 
-            for i in range(x, 1, -1):
-                new_x = i * new_x
+                for i in range(x, 1, -1):
+                    new_x = i * new_x
 
-            for i in range(y, 1, -1):
-                new_y = i * new_y
+                for i in range(y, 1, -1):
+                    new_y = i * new_y
 
-            for i in range(x - y, 1, -1):
-                new_z = i * new_z
+                for i in range(x - y, 1, -1):
+                    new_z = i * new_z
 
-            final_comb = new_x / (new_y * new_z)
+                final_comb = new_x / (new_y * new_z)
 
-            return f"{int(final_comb)} combinations"
+                return f"{int(final_comb)} combinations"
+            else:
+                return "\nWARNING: Total items should be bigger than items to be arranged"
+
     elif choice == 2:
-            # mixedCombination()
             item_types = int(input("How many types of items are there? "))
             item_count = []
             item_select = []
@@ -129,54 +143,53 @@ def two():
 
             return f"{int(final_comb)} combinations"
     else:
-        quit()
-
+        return "Invalid option"
 
 def three():
     print("""\nPascal Generator\n""")
     exponent = int(input("Please enter the exponent to generate Pascal Triangle: "))
-    arrayOne = []
-    arrayTwo = [1]
+    arr1 = []
+    arr2 = [1]
 
-    print(arrayTwo)
+    print(arr2)
     for i in range(1, exponent +1):
-        arrayTwo.clear()
-        arrayTwo.append(1)
+        arr2.clear()
+        arr2.append(1)
         for j in range(1, i + 1):
             if j == i:
-                arrayTwo.append(1)
+                arr2.append(1)
             else:
-                arrayTwo.append(arrayOne[j - 1] + arrayOne[j])
-        print(arrayTwo)
-        arrayOne.clear()
-        arrayOne = arrayTwo.copy()
-
+                arr2.append(arr1[j - 1] + arr1[j])
+        print(arr2)
+        arr1.clear()
+        arr1 = arr2.copy()
+    return ""
 
 def four():
     print("""\nBinomial Expression\n""")
     exponent = int(input("Please enter the exponent to generate Pascal Triangle: "))
-    a = int(input("Please enter coefficient of x: "))
-    b = int(input("Please enter coefficient of y: "))
-    arrayOne = []
-    arrayTwo = []
+    a = int(input("Enter coefficient of x: "))
+    b = int(input("Enter coefficient of y: "))
+    arr1 = []
+    arr2 = []
 
     for i in range(1, exponent + 1):
-        arrayTwo.clear()
-        arrayTwo.append(1)
+        arr2.clear()
+        arr2.append(1)
         for j in range(1, i + 1):
             if j == i:
-                arrayTwo.append(1)
+                arr2.append(1)
             else:
-                arrayTwo.append(arrayOne[j - 1] + arrayOne[j])
-        arrayOne.clear()
-        arrayOne = arrayTwo.copy()
+                arr2.append(arr1[j - 1] + arr1[j])
+        arr1.clear()
+        arr1 = arr2.copy()
 
-    x = len(arrayTwo) - 1
+    x = len(arr2) - 1
     y = 0
 
     print()
     print("Your expanded equation is:")
-    for i in arrayTwo:
+    for i in arr2:
         coEf = ((a ** x) * (b ** y) * i)
         if coEf == 1:
             pass
@@ -194,7 +207,7 @@ def four():
             print("x^" + str(x) + "y^" + str(y) + " + ", end="")
         x -= 1
         y += 1
-
+    return ""
 
 def five():
     quit()
