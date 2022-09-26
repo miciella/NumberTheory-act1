@@ -74,7 +74,7 @@ def menu_option():
         6. Sieve of Erastosthenes (generate all primes less than 25)
         7. Exit""")
 
-    choice = int(input("Choose a property for Natural Numbers: "))
+    choice = int(input("Choice: "))
     print(choice_function(choice))
 
 
