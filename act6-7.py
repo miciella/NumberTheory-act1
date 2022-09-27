@@ -1,4 +1,16 @@
+from math import *
+
 def one():
+        # Check Prime or Composite
+    print("Prime or Composite Number Test")
+    n = int(input("Enter a number: "))
+    d = floor(sqrt(n));
+    for i in range(2, d+1):
+        if(n % i == 0):
+            print(n, "is a composite number");
+            return ""
+    print(n, "is a prime number");
+    return ""
     return
 
 
@@ -67,7 +79,7 @@ def choice_function(number):
 
 def menu_option():
     print("""Divisibility Theory in the Integers:
-        1. Show that 3|99
+        1. Prime or Composite Number Checker
         2. Sieve of Erastosthenes (generate all prime numbers less than 11)
         3. Sieve of Erastosthenes (generate all prime numbers less than 25)
         4. Exit""")
