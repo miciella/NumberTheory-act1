@@ -3,22 +3,26 @@ def one():
 
 
 def two():
-    return
+    prime = [2, 3, 4, 5, 6, 7, 8, 9, 10]
+    p = 2
+    max = len(prime)
+
+    while p * p <= max:
+        if prime[p]:
+            # Update all multiples of p
+            for i in range(p * p, max, p):
+                prime[i] = False
+        p += 1
+
+    # Print all prime numbers
+    print("Following are the prime numbers less than", 11)
+    for p in range(2, max):
+        if prime[p]:
+            print(p)
+    return ""
 
 
 def three():
-    return
-
-
-def four():
-    return
-
-
-def five():
-    return
-
-
-def six():
     # Python program to print all
     # primes less than to n
     # using Sieve of Eratosthenes
@@ -41,7 +45,7 @@ def six():
     return ""
 
 
-def seven():
+def four():
     quit()
 
 
@@ -53,10 +57,7 @@ number_choices = {
     1: one,
     2: two,
     3: three,
-    4: four,
-    5: five,
-    6: six,
-    7: seven,
+    4: four
 }
 
 
@@ -67,12 +68,9 @@ def choice_function(number):
 def menu_option():
     print("""Divisibility Theory in the Integers:
         1. Show that 3|99
-        2. Division algorithm (7 does not divide 1717)
-        3. Determine whether 121 is a prime number
-        4. Are 67942 and 4209 relatively prime?
-        5. Are 121, 122, and 123 pairwise relatively prime?
-        6. Sieve of Erastosthenes (generate all primes less than 25)
-        7. Exit""")
+        2. Sieve of Erastosthenes (generate all prime numbers less than 11)
+        3. Sieve of Erastosthenes (generate all prime numbers less than 25)
+        4. Exit""")
 
     choice = int(input("Choice: "))
     print(choice_function(choice))
