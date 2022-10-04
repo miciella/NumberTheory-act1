@@ -20,8 +20,45 @@ def one():
 
 
 def two():
-    return
+    print("****************************")
+    print("Linear Diophantine Equation")
+    print("****************************")
+    #quotient
+    q = 0 
+    #remainder
+    r = 1 
+    #s-variables
+    k = 1 
+    l = 0 
+    m = 1 
+    #t-variables
+    n = 0
+    o = 1 
+    p = 0 
+    
+    a = int(input("First number: "))
+    b = int(input("Second number: "))
+    c = int(input("Third number: "))
+    gcd = math.gcd(a,b)
 
+    while r > 0:
+        q = math.floor(a / b)
+        r = a - (q * b)
+        m = k - (q * l)
+        p = n - (q * o)
+
+        if r > 0:
+            a = b
+            b = r
+            k = l
+            l = m
+            n = o
+            o = p
+    x = l
+    y = o
+    print("\nGreatest Common Denominator:", gcd)
+    print("Partial Solution:", "x =", x, ",", "y =", y)
+    return x, y
 
 def three():
     return
@@ -50,7 +87,7 @@ def choice_function(number):
 def menu_option():
     print("""Divisibility Theory in the Integers:
         1. Prime factors of 56 (Prime Factorization)
-        2. 
+        2. Linear Diophantine Equation
         3.
         4.
         5.
